@@ -5,32 +5,28 @@ var srcPagePath = path.resolve(rootPath, 'src');
 var srcServerPath = path.resolve(rootPath, 'src/server');
 var buildPath = path.resolve(rootPath, 'build');
 
-var HtmlWebpackPluginList = [
-    {
-        template: "admin.html",
-        filename: "admin/index_index.html",
-        excludeChunks: ['app']
-    },
-    {
-        template: "index.html",
-        filename: "home/index_index.html",
-        excludeChunks: ['admin']
-    },
-    {
-        template: "detail.html",
-        filename: "home/article_detail.html",
-        excludeChunks: ['admin']
-    },
-    {
-        template: "about.html",
-        filename: "home/about_index.html",
-        excludeChunks: ['admin']
-    }
-];
+var HtmlWebpackPluginList = [{
+    template: "admin.html",
+    filename: "admin/index_index.html",
+    excludeChunks: ['app']
+}, {
+    template: "index.html",
+    filename: "home/index_index.html",
+    excludeChunks: ['admin']
+}, {
+    template: "detail.html",
+    filename: "home/article_detail.html",
+    excludeChunks: ['admin']
+}, {
+    template: "about.html",
+    filename: "home/about_index.html",
+    excludeChunks: ['admin']
+}];
 
-function genrateHtmlList(htmlConfig){
-    var configList = [], config = {};
-    for(var i = 0, len = htmlConfig.length; i < len; i++) {
+function genrateHtmlList(htmlConfig) {
+    var configList = [],
+        config = {};
+    for (var i = 0, len = htmlConfig.length; i < len; i++) {
         config = htmlConfig[i];
 
         var obj = {
@@ -40,9 +36,9 @@ function genrateHtmlList(htmlConfig){
             inject: "body",
             minify: {
                 removeComments: false
-                // collapseWhitespace:false,
-                // keepClosingSlash: true,
-                // removeEmptyElements: true
+                    // collapseWhitespace:false,
+                    // keepClosingSlash: true,
+                    // removeEmptyElements: true
             }
         };
 
@@ -52,11 +48,25 @@ function genrateHtmlList(htmlConfig){
     return configList;
 }
 
+function getLoaders(env) {
+    return [{
+        test: /\.(js|jsx)$/,
+        loader: 'babel',
+        include: srcPagePath
+    }, {
+        test: /\.scss$/,
+        loader: "style-loader!css-loader!sass-loader"
+    }, {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192'
+    }]
+}
 
 module.exports = {
     rootPath: rootPath,
     srcPagePath: srcPagePath,
     srcServerPath: srcServerPath,
     buildPath: buildPath,
-    HtmlWebpackPluginList: genrateHtmlList(HtmlWebpackPluginList)
+    HtmlWebpackPluginList: genrateHtmlList(HtmlWebpackPluginList),
+    getLoaders: getLoaders
 }

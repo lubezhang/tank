@@ -1,0 +1,85 @@
+/* 地图区域内的最小元素的尺寸 */
+$base-width: 20px;
+$base-height: 20px;
+
+/* 地图区域 */
+$map-width: $base-width * 4 * 10;
+$map-height: $base-height * 4 * 10;
+
+/* 一个游戏单元的尺寸 */
+$unit-width: $base-width * 2;
+$unit-height: $base-height * 2;
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.map-container {
+    border: 1px solid red;
+    position: relative;
+    width: $map-width;
+    height: $map-height;
+}
+// 老家
+.map-home {
+    background: #ccc;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    bottom: 0px;
+    left: ($map-width / 2) - ($unit-width / 2);
+}
+.map-tank1 {
+    background: #ABB925;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    bottom: 0px;
+    // left: ($map-width / 2) - ($unit-width * 2);
+    transform: translateX(($map-width / 2) - ($unit-width * 2));
+}
+
+.map-tank2 {
+    background: #1AB355;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    bottom: 0px;
+    left: ($map-width / 2) + $unit-width;
+}
+
+// 第1个敌人生产点
+.map-enemy1 {
+    background: #F35D5D;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    top: 0px;
+    left: 0;
+}
+// 第2个敌人生产点
+.map-enemy2 {
+    background: #F35D5D;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    top: 0px;
+    left: ($map-width / 2) - ($unit-width / 2);
+}
+// 第3个敌人生产点
+.map-enemy3 {
+    background: #F35D5D;
+    position: absolute;
+    width: $unit-width;
+    height: $unit-height;
+    top: 0px;
+    right: 0;
+}
+
+.tank-bullet {
+    background: red;
+    width: $base-width;
+    height: $base-height;
+    position: absolute;
+}
