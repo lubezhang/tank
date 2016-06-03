@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import keydown from 'react-keydown';
 
 import Tank from './Tank';
-import { keyMap } from '../common/constants'
 
 class Map extends Component {
     constructor(props) {
         super(props);
+        
         this.state = { 
             direction: ""
         };
     }
 
-    componentDidMount(){
-
-    }
-    
-    @keydown( 'a', 's', 'd', 'w', 'k' )
-    move(event){
+    // @keydown( 'a', 's', 'd', 'w', 'k', 'w+k' )
+    control(controlKey){
         // console.log(event.which);
         this.setState({
-            direction: keyMap[event.which]
+            direction: controlKey
         })
     }
 
