@@ -12,17 +12,14 @@ export default class Tank extends Component {
         this.state = {
             direction: ""
         }
-        // 接收按键缓存
-        this.keyBuff = {};
-        // 移动坦克的定时器句柄
-        this.tankTimer = 0;
-        // 坦克的位置
-        this.position = {
+        
+        this.keyBuff = {};  // 接收按键缓存
+        this.tankTimer = 0; // 移动坦克的定时器句柄
+        this.position = {   // 坦克的位置
             top: 0,
             left: 0
         }
-        // 坦克的速度
-        this.speed = 1;
+        this.speed = 1;     // 坦克的速度
         // 坦克的当前状态
         this.tank = {
             direction: "",      //行驶方向
@@ -30,6 +27,19 @@ export default class Tank extends Component {
             isMoveing: false,   // 是否正在移动
             isFire: false       // 是否开火
         }
+
+        /**
+         * {
+         *     position:{
+         *         top: 0,
+         *         lett: 0
+         *     },
+         *     callback: function(){
+         *     },
+         *     direction: "",
+         * }
+         */
+        this.bulletCache = [];
     }
 
     componentDidMount(){
@@ -81,19 +91,19 @@ export default class Tank extends Component {
                 this.tank.isFire = false;
             }
         }
-        // console.log("");
-        // console.log(new Date().getTime(),"checkKey ====  keyBuff:",JSON.stringify(this.keyBuff)," direction:",this.tank.direction,"   isFire:", this.tank.isFire);
+        console.log("");
+        console.log(new Date().getTime(),"checkKey ====  keyBuff:",JSON.stringify(this.keyBuff)," direction:",this.tank.direction,"   isFire:", this.tank.isFire);
 
         // 移动坦克
         this.ctrlDirection();
         // 发射炮弹
         // fire && this.fire();
+        this.tank.isFire && this.bulletCache.length < 3 && this.bulletCache.push({
+            direction: ""
+        })
     }
 
     ctrlDirection(){
-        // console.log(fire);
-        // 1、没有方向按键，清除移动坦克的定时器
-        // 2、
         if(_.isEmpty(this.tank.direction) || (this.tank.prevDirection !== this.tank.direction)) {
             clearInterval(this.tankTimer);
             this.tank.isMoveing = false
@@ -136,12 +146,13 @@ export default class Tank extends Component {
     render() {
         // console.log("render ==== direction:",this.tank.direction,"   isFire:", this.tank.isFire);
         let style = this.getNextPosition();
-        let bullet = this.tank.isFire ? <Bullet /> : "";
+        let bulletList = this.bulletCache.map((bullet, index)=> <Bullet key={index}/>)
+        // let bullet = this.tank.isFire ? <Bullet /> : "";
 
         return (
             <div className="map-tank1" style={style}>
                 {this.props.children}
-                {bullet}
+                {bulletList}
             </div> 
         );
     }
