@@ -1,36 +1,55 @@
 import { combineReducers } from 'redux';
+import _ from 'lodash';
 
-import actions from './actions';
+import * as actions from "./actions";
 
 const initState = {
-    // tankMove: '',
-    // tankFire: false,
-    // map: []
+    tank: {
+
+    }
 };
 
-function tankMove(state = initState, action){
-    console.log('tankMove reducers', state);
-    switch(action.type) {
-        case action.TANK_MOVE:
-            return Object.assign({}, state, {tankMove: action.direction});
-            break;
+function map(state = initState, action) {
+    return state;
+}
+
+
+
+function tank(state = initState, action){
+    switch (action.type) {
+        case actions.TANK_MOVE:
+            return Object.assign({}, state, {direction: action.direction});
+        case actions.TANK_FIRE:
+            return Object.assign({}, state, {fire: action.fire});
         default:
-            return state;
+            return state; 
     }
 }
 
-function tankFire(state = initState, action){
-    console.log('tankFire reducers', state);
-    switch(action.type) {
-        case action.TANK_FIRE:
-            return Object.assign({}, state, { tankFire:action.fire});
-            break;
-        default:
-            return state;
+// export default combineReducers({
+//     tank
+// })
+// 
+
+function play(state = initState, action){
+    let params = action.params;
+    if(!params) {
+        return state;
     }
+
+    state = _.merge({}, state, {
+        tank: {
+            direction: params.direction || ''
+        }
+    })
+
+    state = _.merge({}, state, {
+        tank: {
+            fire: params.fire || ''
+        }
+    })
+
+    return state;
 }
 
-export default combineReducers({
-    tankMove,
-    tankFire
-})
+export default play;

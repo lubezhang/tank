@@ -24,7 +24,7 @@ module.exports = {
         hot: true,
         inline: true,
         progress: true,
-        port: 3000
+        port: 3001
     },
     //babel重要的loader在这里
     module: {
