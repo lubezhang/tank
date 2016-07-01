@@ -1,6 +1,6 @@
 # webpack-react-hot
 
-一个使用webpack热加载react组件的项目框架。
+一个使用react+redux开发的坦克游戏。
 
 ## 安装
 ### 开发阶段(http://localhost:3000)
