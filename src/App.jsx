@@ -9,7 +9,6 @@ import KeyEvent from './common/KeyEvent'
 import * as actions from "./redux/actions";
 
 function mapStateToProps(state) {
-    debugger;
     return { 
         tank: state.tank
     }
@@ -30,18 +29,20 @@ export default class App extends Component {
         this.keyTime = 0;
     }
 
-     componentDidMount(){
+    componentDidMount(){
         window.document.addEventListener('keydown', this.eventKeyDown.bind(this));
         // window.document.addEventListener('keypress', this.eventKeyPress.bind(this));
         window.document.addEventListener('keyup', this.eventKeyUp.bind(this));
 
-        this.keyTime = setInterval(this.checkKey.bind(this), 100); 
+        // 事件和动画统一处理定时器
+        this.keyTime = setInterval(this.checkKey.bind(this), 30); 
     }
 
     componentWillUnmount() {
         window.document.removeEventListener('keydown', this.eventKeyDown);
         // window.document.removeEventListener('keypress', this.eventKeyPress);
         window.document.removeEventListener('keyup', this.eventKeyUp);
+        // 卸载组件时清理定时器。如果不清理，自动刷新页面后会生成多个
         clearInterval(this.keyTime)
     }
 
@@ -67,6 +68,11 @@ export default class App extends Component {
         if(keyFireMap[keyCode]) {
             this.keyFire = '';
         }
+
+        // 如果没有任何动作，发送一个停止的指令
+        if(_.isEmpty(this.keyDirection) && _.isEmpty(this.keyFire)) {
+            this.props.actions.play({});
+        }    
     }
 
     checkKey(){
@@ -92,7 +98,7 @@ export default class App extends Component {
         const { actions, tank } = this.props;
         // console.log(tank);
         return (
-            <Map actions={actions} tank={tank}/>
+            <Map tank={tank}/>
         );
     }
 }
