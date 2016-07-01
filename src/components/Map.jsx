@@ -9,14 +9,14 @@ class Map extends Component {
 
     render() {
                 // <div className="map-tank2">T2</div> 
-        let { actions, tank } = this.props;
+        let { tank } = this.props;
         // console.log('**************** Map render', direction);
         return (
             <div className="map-container" ref="mapContainer">
                 <div className="map-enemy1">E1</div>
                 <div className="map-enemy2">E2</div> 
                 <div className="map-enemy3">E3</div> 
-                <Tank actions={actions} direction={tank.direction} fire={tank.fire}>T1</Tank> 
+                <Tank direction={tank.direction} fire={tank.fire}></Tank> 
                 <div className="map-home">H</div> 
             </div>
         );

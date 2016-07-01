@@ -14,7 +14,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+/**
+ * 地图样式 开始
+ */
 .map-container {
     border: 1px solid red;
     position: relative;
@@ -76,6 +78,38 @@ html, body {
     top: 0px;
     right: 0;
 }
+/**
+ * 地图样式 结束
+ */
+
+/**
+ * 坦克样式 开始
+ */
+.tank-barrel {
+    background: #FF0000;
+    width: $base-width/2;
+    height: $base-height/2;
+    // position: relative;
+    position: absolute;
+}
+
+.tank-barrel-up {
+    left: $base-width/2 + ($base-width/4);
+}
+
+.tank-barrel-right {
+    top: $base-height/2 + ($base-height/4);
+    left: $unit-width - ($base-width / 2);
+}
+
+.tank-barrel-down {
+    top: $unit-height - ($base-height / 2);
+    left: $base-width/2 + ($base-width/4);
+}
+
+.tank-barrel-left {
+    top: $base-height/2 + ($base-height/4);
+}
 
 .tank-bullet {
     background: red;
@@ -83,3 +117,11 @@ html, body {
     height: $base-height;
     position: absolute;
 }
+
+/**
+ * 坦克样式 结束
+ */
+
+
+
+

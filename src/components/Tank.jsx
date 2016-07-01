@@ -2,22 +2,25 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import { Bullet } from "./index";
-import { keyMap } from '../common/constants'
-/** 
- * direction: 坦克的运动方向。up, down, left, right
- */
+
 export default class Tank extends Component {
     constructor(props) {
         super(props);
-        this.position = {   // 坦克的位置
+        this.position = { // 坦克的位置
             top: 0,
             left: 0
         }
-        this.speed = 1;     // 坦克的速度
+        this.speed = 1; // 坦克的速度
+        this.cacheBarrel = 'tank-barrel tank-barrel-up';
     }
 
-    getNextPosition(direction){
-        switch(direction) {
+    componentDidMount() {
+        this.init = true;
+    }
+
+    // 坦克移动样式
+    getNextPosition(direction) {
+        switch (direction) {
             case "up":
                 this.position.top = this.position.top - this.speed;
                 break;
@@ -30,7 +33,6 @@ export default class Tank extends Component {
             case "right":
                 this.position.left = this.position.left + this.speed;
                 break;
-
         }
 
         return {
@@ -38,14 +40,25 @@ export default class Tank extends Component {
         }
     }
 
+    // 坦克炮管的样式
+    getBarrelDirection(direction) {
+        let strBarrel = "tank-barrel tank-barrel-";
+        if(direction === '') {
+            return this.cacheBarrel;
+        }
+        this.cacheBarrel = strBarrel + direction;
+        return strBarrel + direction;
+    }
+
     render() {
-        let { direction, fire } = this.props, style = this.getNextPosition(direction);
+        let { direction, fire } = this.props;
         // console.log('^^^^^^^^^^^^^^^^  Tank Renderw', direction, style);
 
         return (
-            <div className="map-tank1" style={style}>
+            <div className="map-tank1" style={this.getNextPosition(direction)}>
                 {this.props.children}
                 <div>{fire}</div>
+                <div className={this.getBarrelDirection(direction)}></div>
             </div> 
         );
     }
