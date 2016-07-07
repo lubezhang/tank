@@ -1,14 +1,14 @@
 /* 地图区域内的最小元素的尺寸 */
-$base-width: 20px;
-$base-height: 20px;
-
-/* 地图区域 */
-$map-width: $base-width * 4 * 10;
-$map-height: $base-height * 4 * 10;
+$base-width: 10px;
+$base-height: 10px;
 
 /* 一个游戏单元的尺寸 */
-$unit-width: $base-width * 2;
-$unit-height: $base-height * 2;
+$unit-width: $base-width * 4;
+$unit-height: $base-height * 4;
+
+/* 地图区域 */
+$map-width: $unit-width * 20;
+$map-height: $unit-height * 20;
 
 html, body {
     margin: 0;
@@ -37,7 +37,7 @@ html, body {
     position: absolute;
     width: $unit-width;
     height: $unit-height;
-    bottom: 0px;
+    // bottom: 0px;
     // left: ($map-width / 2) - ($unit-width * 2);
     transform: translateX(($map-width / 2) - ($unit-width * 2));
 }
@@ -87,35 +87,36 @@ html, body {
  */
 .tank-barrel {
     background: #FF0000;
-    width: $base-width/2;
-    height: $base-height/2;
+    width: $base-width;
+    height: $base-height;
     // position: relative;
     position: absolute;
 }
 
 .tank-barrel-up {
-    left: $base-width/2 + ($base-width/4);
+    left: $base-width + ($base-width/4);
 }
 
 .tank-barrel-right {
-    top: $base-height/2 + ($base-height/4);
-    left: $unit-width - ($base-width / 2);
+    top: $base-height + ($base-height/4);
+    left: $unit-width - ($base-width);
 }
 
 .tank-barrel-down {
-    top: $unit-height - ($base-height / 2);
-    left: $base-width/2 + ($base-width/4);
+    top: $unit-height - ($base-height);
+    left: $base-width + ($base-width/4);
 }
 
 .tank-barrel-left {
-    top: $base-height/2 + ($base-height/4);
+    top: $base-height + ($base-height/4);
 }
 
 .tank-bullet {
-    background: red;
+    background: #FF0000;
     width: $base-width;
     height: $base-height;
     position: absolute;
+    // bottom: 0px;
 }
 
 /**
