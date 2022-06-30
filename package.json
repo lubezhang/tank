@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pixi.js": "^6.2.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@types/pixi.js": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "@vitejs/plugin-vue": "^2.3.3",

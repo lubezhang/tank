@@ -1,33 +1,24 @@
+import { EnumGameTankCtrl } from './types';
+/** 地图区域内的元素的基础尺寸 */
+export const CONST_MAP_BASE_SIZE = 15;
+export const CONST_MAP_BASE_ELEMENT_COUNT = 18;
 
-// 地图区域内的最小元素的尺寸
-export const CONST_MAP_BASE_WIDTH = 15;
-export const CONST_MAP_BASE_HEIGHT = 15;
-
-// 一个游戏单元的尺寸
-export const CONST_MAP_UNIT_WIDTH = CONST_MAP_BASE_WIDTH * 2;
-export const CONST_MAP_UNIT_HEIGHT = CONST_MAP_BASE_HEIGHT * 2;
-
-// 地图区域
-export const CONST_MAP_WIDTH = CONST_MAP_UNIT_WIDTH * 24;
-export const CONST_MAP_HEIGHT = CONST_MAP_UNIT_HEIGHT * 24;
-
-/* 游戏元素类型 */
-export enum EnumGameElement {
-    /** 炮弹 */
-    BULLET,
-    /** 坦克 */
-    TANK,
-    /** 场景内的建筑物 */
-    BUILDING
+/** 一个游戏单元的尺寸 */
+export const CONST_MAP_ELEMENT = {
+    WIDTH: CONST_MAP_BASE_SIZE * 2,
+    HEIGHT: CONST_MAP_BASE_SIZE * 2
 };
 
-/** 坦克控制 */
-export enum EnumGameTankCtrl {
-    Left,
-    Right,
-    Up,
-    Down,
-    Fire
+/** 地图区域 */
+export const CONST_MAP = {
+    WIDTH: CONST_MAP_ELEMENT.WIDTH * CONST_MAP_BASE_ELEMENT_COUNT,
+    HEIGHT: CONST_MAP_ELEMENT.HEIGHT * CONST_MAP_BASE_ELEMENT_COUNT
+};
+
+/** pixi 组件类型 */
+export const CONST_PIXI_ELEMENT_TYPE = {
+    CONTAINER: 'Container',
+    SPRITE: 'Sprite'
 };
 
 /**
@@ -41,12 +32,3 @@ export const CONST_GAME_KEY_MAP = {
     83: EnumGameTankCtrl.Down, // 坦克向下移动
     75: EnumGameTankCtrl.Fire // 坦克开炮
 };
-
-export enum EnumTankType {
-    /** 玩家1 */
-    Gamer1,
-    /** 玩家2 */
-    Gamer2,
-    /** 敌人 */
-    Enemy
-}

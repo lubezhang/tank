@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/pixi.js': ^5.0.0
   '@typescript-eslint/eslint-plugin': ^5.29.0
   '@typescript-eslint/parser': ^5.29.0
   '@vitejs/plugin-vue': ^2.3.3
@@ -13,15 +14,18 @@ specifiers:
   eslint-plugin-vue: ^9.1.1
   git-cz: ^4.8.0
   less: ^4.1.3
+  pixi.js: ^6.2.2
   typescript: ^4.7.4
   vite: ^2.9.12
   vue: ^3.2.37
   vue-tsc: ^0.34.17
 
 dependencies:
+  pixi.js: 6.2.2
   vue: 3.2.37
 
 devDependencies:
+  '@types/pixi.js': 5.0.0
   '@typescript-eslint/eslint-plugin': 5.29.0_qqmbkyiaixvppdwswpytuf2hgm
   '@typescript-eslint/parser': 5.29.0_b5e7v2qnwxfo6hmiq56u52mz3e
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
@@ -214,6 +218,400 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@pixi/accessibility/6.2.2_uwouqetoimyah3g5jii7ohzxpm:
+    resolution: {integrity: sha512-/mXRXCw67bmPY/OZ1Y1p747h3SSg7eqacIChAUJohjbcJK0R2EJRD2uVTspVIUpHPJA0ECNGBpKqk0C1Yzkj2w==, tarball: '@pixi/accessibility/download/@pixi/accessibility-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/app/6.2.2_gvze6i6g3adn3khmvypvs7hxgi:
+    resolution: {integrity: sha512-YBzVaSZGA842w2gsgqzxYwQMXeu2JZmSyiybi4raFsA35iOeMurXy7sEs5NP9JO+cjobJyx6echuHzZpKUjWsQ==, tarball: '@pixi/app/download/@pixi/app-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+
+  /@pixi/compressed-textures/6.2.2_rm3npuesd75fkkrxcoy7k7up24:
+    resolution: {integrity: sha512-ZjiqYCE6nGtsKTRa6w4W6Krh3vo4M3WT6lrP+VW6BfgUx3quEURt5GVFsFZrJpWF4yI1fShFmjBUOerrTLJGRQ==, tarball: '@pixi/compressed-textures/download/@pixi/compressed-textures-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/loaders': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/loaders': 6.2.2_xvlzdpn2vvkcezl5lu3zbv6k54
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/constants/6.2.2:
+    resolution: {integrity: sha512-BKSoj/5SI+pQEatuCG5kXXWtCZmZZNMhfhXeqvYO/WNZ+LDxm6F4pllf0t7KjGs1ZBpNxVf6fyngF9Q5r3MgJQ==, tarball: '@pixi/constants/download/@pixi/constants-6.2.2.tgz'}
+
+  /@pixi/core/6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi:
+    resolution: {integrity: sha512-XAqgdJ1w9k1ZUBXECm19rcnN2ngm+tOP74HkGw4qQay0biM3JS+wtX4fWQmZNGr8krf6lJrNbsghbtUy70uUaw==, tarball: '@pixi/core/download/@pixi/core-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/runner': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/ticker': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/runner': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/ticker': 6.2.2_@pixi+settings@6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/display/6.2.2_s4uauiowbx7ioianb42z5bfm6m:
+    resolution: {integrity: sha512-8a0R+9rjlUUjb13nBA6ZNj9gygJqt38B63uIZ2inkhxpIQf0CLo2hNxkqCqXiMeRuGmOw1n6neEDMnHO1Ks+xA==, tarball: '@pixi/display/download/@pixi/display-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/extract/6.2.2_gomqhkt3vbstkckrqsh7gtl3cq:
+    resolution: {integrity: sha512-w3gW1/VoHNqFEUNGRQBKm8dCdg816etbpbLExWctmPpNdyxos5N7DF44UMRFg40GPVBBNzYissrH/ojca4PFIA==, tarball: '@pixi/extract/download/@pixi/extract-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/filter-alpha/6.2.2_@pixi+core@6.2.2:
+    resolution: {integrity: sha512-CijLcgFdmivmSyZuM5Yyeo6R+PwalZp9OSoard1Oh5DBVvcRDn4m3cBM+nimR4YJbr0kiMbK4Ja8r+e2vwFVjA==, tarball: '@pixi/filter-alpha/download/@pixi/filter-alpha-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+
+  /@pixi/filter-blur/6.2.2_3wrizke7sln3pd7ztetqpkqava:
+    resolution: {integrity: sha512-ApFqn2fMIipr3mRp/8dZ74qraGGzzPO/EzvltDqJLru9vGlbX6dKLXZ6w5H8D/uN6aQW1e4N1Nrtzk5mvJVQ3g==, tarball: '@pixi/filter-blur/download/@pixi/filter-blur-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/settings': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/settings': 6.2.2
+
+  /@pixi/filter-color-matrix/6.2.2_@pixi+core@6.2.2:
+    resolution: {integrity: sha512-fQWbtKFWV29jKkq4d6TknEfQ5sF5OxcbJeZo0HJmgoV3FLZ0t21XE991CFI/TqDBo8U3wzUPZVbXxiFoDKmJ8w==, tarball: '@pixi/filter-color-matrix/download/@pixi/filter-color-matrix-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+
+  /@pixi/filter-displacement/6.2.2_rwmfk47hc7dmhmrpkdbyckgssm:
+    resolution: {integrity: sha512-cd9um4kNNIeqKA/wVZw+iha+XVbBOYBC8En5hk3ZXAIXxCHxOCz3KS+aOVejXH5EB/gMDPvNNwygn0SCpSGdKA==, tarball: '@pixi/filter-displacement/download/@pixi/filter-displacement-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/math': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/math': 6.2.2
+
+  /@pixi/filter-fxaa/6.2.2_@pixi+core@6.2.2:
+    resolution: {integrity: sha512-e4qekMlsiEcjV0JRoqH3b34sk8yzT4jsROYPHzk0IiafE+nNNcF3vQmcmnfC0aGIyODzmNdzFLjlFkRRSviydA==, tarball: '@pixi/filter-fxaa/download/@pixi/filter-fxaa-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+
+  /@pixi/filter-noise/6.2.2_@pixi+core@6.2.2:
+    resolution: {integrity: sha512-Jp4L6winS6ZGKpp76x3JyfEWnUMY44fQ90Ts3R3vKkZZFNDd3T4uisZ7YwvDKOhmSo5hY3lQkXaCg/YO5feXbw==, tarball: '@pixi/filter-noise/download/@pixi/filter-noise-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+
+  /@pixi/graphics/6.2.2_3undmvip5kxrsqvzxwr2tcatda:
+    resolution: {integrity: sha512-mQyd6ef6/EF5nt7M1OObBEb9FCXxIP6AT30H01Z2wnnCgu4qj8MHrJxTkQxSHynQ+eVVPswzpVizUQZHlIYZNw==, tarball: '@pixi/graphics/download/@pixi/graphics-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/sprite': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/interaction/6.2.2_kezad3yfnfrh7767kjsum6jrni:
+    resolution: {integrity: sha512-gpNLCPc+j+RZSZqbKbzVRf4fSlOlYm0xqUVn6JtNH1kc+d9AV7Nmw9but4osP/eodDWsWPQ+7sPKClHY36bKRA==, tarball: '@pixi/interaction/download/@pixi/interaction-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/ticker': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/ticker': 6.2.2_@pixi+settings@6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/loaders/6.2.2_xvlzdpn2vvkcezl5lu3zbv6k54:
+    resolution: {integrity: sha512-jwFM59GeMQpzuniw5PlC7kCoXZEaKrw31/ecR1sXKWDtHRyMtvXTuf+R+tSol/1ISQ55c0JBTuUbLPwp7hPvFQ==, tarball: '@pixi/loaders/download/@pixi/loaders-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/math/6.2.2:
+    resolution: {integrity: sha512-TtsaooRRMc/WAZ4LKUDhP/d14BZElLjRNa2gopwTKUtrDa1KvzAMr8WJ8P+gaXl4DJ8B/MlgESdPhRUqVSUw0A==, tarball: '@pixi/math/download/@pixi/math-6.2.2.tgz'}
+
+  /@pixi/mesh-extras/6.2.2_ckjmjh2ggrdjmirejyjazyhfgu:
+    resolution: {integrity: sha512-HFYWhWcV6gY7VYnMhz9OSEN14PPfVqLzWnglbegGEMqCbY/ZGsD8X99x/HLGQGd6L4FFto382q0Fj1xu+y/brg==, tarball: '@pixi/mesh-extras/download/@pixi/mesh-extras-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/mesh': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/math': 6.2.2
+      '@pixi/mesh': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/mesh/6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq:
+    resolution: {integrity: sha512-CsKFgTu2MP756sHeoCr9s4tHy2VmnDZPnvZ0ThV8QMnb5w3Z2qRDKlXSSIdNaQOxoAPKkqxIu0JbLK8kyX0oqw==, tarball: '@pixi/mesh/download/@pixi/mesh-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/mixin-cache-as-bitmap/6.2.2_2y5uxy773aeq2q5fcgpnedaoqq:
+    resolution: {integrity: sha512-t3jZKGa/qoRMetMWmGkXz8Kp1Uzmb+2y4/adqu+RdIeG3D1oItuGux+R36ZQO6dVRv3R8s2/Dex0aACek171zw==, tarball: '@pixi/mixin-cache-as-bitmap/download/@pixi/mixin-cache-as-bitmap-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/sprite': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/mixin-get-child-by-name/6.2.2_@pixi+display@6.2.2:
+    resolution: {integrity: sha512-BBrniLAkzDex4HyvVdE/DjphzQu4pZ8Nc5aDRIbiS1s283/IXr2oTcoaW23kCjhX0xgu++XcJQQMMyv3mlblZQ==, tarball: '@pixi/mixin-get-child-by-name/download/@pixi/mixin-get-child-by-name-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/display': 6.2.2
+    dependencies:
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+
+  /@pixi/mixin-get-global-position/6.2.2_mkal36agyk7udrrcgp5vqaejuy:
+    resolution: {integrity: sha512-Rz7DHn6koYFEeVG36rKiMwoTD+elJKqwQ24HHw0BAKz1VwGagBi0ZTcJ+nWplBOrw6ZPKfdOBwGQLXD7ODg8lQ==, tarball: '@pixi/mixin-get-global-position/download/@pixi/mixin-get-global-position-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+    dependencies:
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+
+  /@pixi/particle-container/6.2.2_atnzpq4capzlzqxc5efdpwimqy:
+    resolution: {integrity: sha512-DYbSCcUiVLeM4sKZkzAp3F6dz3idyP1jecxbFqNmRjWRyMv7uXIO42rxGJMrd6BzA5j7DkywI3X0SqhhSZP7Ag==, tarball: '@pixi/particle-container/download/@pixi/particle-container-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/polyfill/6.2.2:
+    resolution: {integrity: sha512-Fd5KnjrqG9Vwgl9sDfPvNeqW3/d+hG9Du7H3y5PmItBnu9wXldTtA+I5D0BLsL/wjjjCQLbPVFKwCJj511XfBw==, tarball: '@pixi/polyfill/download/@pixi/polyfill-6.2.2.tgz'}
+    dependencies:
+      object-assign: 4.1.1
+      promise-polyfill: 8.2.3
+
+  /@pixi/prepare/6.2.2_6wcu4crpdq6pl6m4gsu7l42lfe:
+    resolution: {integrity: sha512-kJojn/6zEcao+XQyU+zWkBmQr0Tgeju3F9JYBpPQ8MKIUJYvDQDtRxYo9A6Xzxk8FJ373s2Ext/OelX2FcR3HQ==, tarball: '@pixi/prepare/download/@pixi/prepare-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/graphics': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/text': 6.2.2
+      '@pixi/ticker': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/graphics': 6.2.2_3undmvip5kxrsqvzxwr2tcatda
+      '@pixi/settings': 6.2.2
+      '@pixi/text': 6.2.2_cfppjymteppnizfw3uti5e7vua
+      '@pixi/ticker': 6.2.2_@pixi+settings@6.2.2
+
+  /@pixi/runner/6.2.2:
+    resolution: {integrity: sha512-q7bc6Eu2XplGzCQBOhbv32P0z48ixW/Su6epT9IOfDi2iTiPjB5Sxp9e+DZDFIzvkfLzgr67Ddy51YMvOp5sQg==, tarball: '@pixi/runner/download/@pixi/runner-6.2.2.tgz'}
+
+  /@pixi/settings/6.2.2:
+    resolution: {integrity: sha512-eQv0ykSwnJUd/LF4MuaFoL+eBNG+EUPAVfsnlsez/Y09aqwIzJyAjRx+uGp9adQ3XHXwYt2l2wINn+foF1y/8A==, tarball: '@pixi/settings/download/@pixi/settings-6.2.2.tgz'}
+    dependencies:
+      ismobilejs: 1.1.1
+
+  /@pixi/sprite-animated/6.2.2_3umokl7xltuc2bntoyrefufahq:
+    resolution: {integrity: sha512-MNkVIuC06aXn8bgfWyqQE8vmclCVLgmHB//hssr/1IFCVmnEEYZLyeWErkIA87grY3iV7tGOILEYSa3pod4XEg==, tarball: '@pixi/sprite-animated/download/@pixi/sprite-animated-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/sprite': 6.2.2
+      '@pixi/ticker': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/ticker': 6.2.2_@pixi+settings@6.2.2
+
+  /@pixi/sprite-tiling/6.2.2_3undmvip5kxrsqvzxwr2tcatda:
+    resolution: {integrity: sha512-HQ9RVObmwyPq+PM2wm2UEIMdsvWg96ymSz0NOh9bOfMSme18vSWv0Rbidv/FziQT8x6MpoLpYke0DYMGtbu0tA==, tarball: '@pixi/sprite-tiling/download/@pixi/sprite-tiling-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/sprite': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/sprite/6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq:
+    resolution: {integrity: sha512-Imr+sJWFh5GtarW3FBBUzedSexfijg7OL0A6qwMDHA011gjyVeRZ15uXP8fgIwUoHoMLsU6xk85jcucM9RfWuw==, tarball: '@pixi/sprite/download/@pixi/sprite-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/spritesheet/6.2.2_2tf7bt5rmc3hso2f57txd7mluy:
+    resolution: {integrity: sha512-TZodC/pf+CW/8kZN+RPzObXWSPgYv1pp+foUnOHb7w8AyFnMljeqBPiUfLQaMzw91TI9AHLihoeeofqZ4wMpww==, tarball: '@pixi/spritesheet/download/@pixi/spritesheet-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/loaders': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/loaders': 6.2.2_xvlzdpn2vvkcezl5lu3zbv6k54
+      '@pixi/math': 6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/text-bitmap/6.2.2_dbinhgwas6epk5qtn7quekxmeu:
+    resolution: {integrity: sha512-pJZM0o68n6cUFUdolvpuuloMccdQqvTc3CLzhLu9xW9HLx7NeFjZEQWTGQea8GXsGa1RhvlMd9x3AiVSNMI2FA==, tarball: '@pixi/text-bitmap/download/@pixi/text-bitmap-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2
+      '@pixi/display': 6.2.2
+      '@pixi/loaders': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/mesh': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/text': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/loaders': 6.2.2_xvlzdpn2vvkcezl5lu3zbv6k54
+      '@pixi/math': 6.2.2
+      '@pixi/mesh': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/settings': 6.2.2
+      '@pixi/text': 6.2.2_cfppjymteppnizfw3uti5e7vua
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/text/6.2.2_cfppjymteppnizfw3uti5e7vua:
+    resolution: {integrity: sha512-Hi6MO/QhllZ4IWkr7MBzImzHB88XXKlF5E9xt1vUBhdZb3KsQD+cPx+bNCFWn6ZMWDmOloJekzRkkSl3KrfBSw==, tarball: '@pixi/text/download/@pixi/text-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/core': 6.2.2
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/sprite': 6.2.2
+      '@pixi/utils': 6.2.2
+    dependencies:
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/math': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
+  /@pixi/ticker/6.2.2_@pixi+settings@6.2.2:
+    resolution: {integrity: sha512-tF3cRtcYnj3U3HFQ0IJKvAxFU1YUM96T0p8Qh478xZhvGxYGnjrQDPmjXePb4NocAdG5adb6//2uvQOd7o4rHg==, tarball: '@pixi/ticker/download/@pixi/ticker-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/settings': 6.2.2
+    dependencies:
+      '@pixi/settings': 6.2.2
+
+  /@pixi/utils/6.2.2_vuevw6xmjfu622ov5lys2euerm:
+    resolution: {integrity: sha512-rpS6QolFuRmm/QcKm5PYHOCkX6okl9a00u2osaMbmPP+l7XLATTxSsFhw64UbSNR+zmzsrhreRFBVFn3tf8K6w==, tarball: '@pixi/utils/download/@pixi/utils-6.2.2.tgz'}
+    peerDependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/settings': 6.2.2
+    dependencies:
+      '@pixi/constants': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@types/earcut': 2.1.1
+      earcut: 2.2.3
+      eventemitter3: 3.1.2
+      url: 0.11.0
+
   /@tsconfig/node10/1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==, tarball: '@tsconfig/node10/download/@tsconfig/node10-1.0.9.tgz'}
     dev: true
@@ -234,6 +632,9 @@ packages:
     dev: true
     optional: true
 
+  /@types/earcut/2.1.1:
+    resolution: {integrity: sha1-VzoK9gnxcAXHUfb0/+xJz+NY6lE=, tarball: '@types/earcut/download/@types/earcut-2.1.1.tgz'}
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==, tarball: '@types/json-schema/download/@types/json-schema-7.0.11.tgz'}
     dev: true
@@ -251,6 +652,13 @@ packages:
     resolution: {integrity: sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=, tarball: '@types/parse-json/download/@types/parse-json-4.0.0.tgz'}
     dev: true
     optional: true
+
+  /@types/pixi.js/5.0.0:
+    resolution: {integrity: sha1-P71tnSbLVjoPKHDg6nZ7xi3d8bg=, tarball: '@types/pixi.js/download/@types/pixi.js-5.0.0.tgz'}
+    deprecated: This is a stub types definition. pixi.js provides its own type definitions, so you do not need this installed.
+    dependencies:
+      pixi.js: 6.2.2
+    dev: true
 
   /@typescript-eslint/eslint-plugin/5.29.0_qqmbkyiaixvppdwswpytuf2hgm:
     resolution: {integrity: sha512-kgTsISt9pM53yRFQmLZ4npj99yGl3x3Pl7z4eA66OuTzAGC4bQB5H5fuLwPnqTKU3yyrrg4MIhjF17UYnL4c0w==, tarball: '@typescript-eslint/eslint-plugin/download/@typescript-eslint/eslint-plugin-5.29.0.tgz'}
@@ -882,6 +1290,9 @@ packages:
       esutils: 2.0.3
     dev: true
 
+  /earcut/2.2.3:
+    resolution: {integrity: sha1-1EztL/WhiFlWjjJ92cfUaxb1XPQ=, tarball: earcut/download/earcut-2.2.3.tgz}
+
   /errno/0.1.8:
     resolution: {integrity: sha1-i7Ppx9Rjvkl2/4iPdrSAnrwugR8=, tarball: errno/download/errno-0.1.8.tgz}
     hasBin: true
@@ -1428,6 +1839,9 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /eventemitter3/3.1.2:
+    resolution: {integrity: sha1-LT1I+cNGaY/Og6hdfWZOmFNd9uc=, tarball: eventemitter3/download/eventemitter3-3.1.2.tgz}
+
   /expand-tilde/2.0.2:
     resolution: {integrity: sha1-l+gBqgUt8CRU3kawK/YhZCzchQI=, tarball: expand-tilde/download/expand-tilde-2.0.2.tgz}
     engines: {node: '>=0.10.0'}
@@ -1937,6 +2351,9 @@ packages:
     resolution: {integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=, tarball: isexe/download/isexe-2.0.0.tgz}
     dev: true
 
+  /ismobilejs/1.1.1:
+    resolution: {integrity: sha1-xWygro5Sskyg8iul7zIVot27qg4=, tarball: ismobilejs/download/ismobilejs-1.1.1.tgz}
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, tarball: js-tokens/download/js-tokens-4.0.0.tgz}
     dev: true
@@ -2149,6 +2566,10 @@ packages:
       boolbase: 1.0.0
     dev: true
 
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz}
+    engines: {node: '>=0.10.0'}
+
   /object-inspect/1.12.2:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==, tarball: object-inspect/download/object-inspect-1.12.2.tgz}
     dev: true
@@ -2292,6 +2713,45 @@ packages:
     dev: true
     optional: true
 
+  /pixi.js/6.2.2:
+    resolution: {integrity: sha512-/xCnJUsWTZuacR6JYTnRbUb+5grzlqpp2O1Ub7bCZCE3FApTCs7nMNYeLfdeP+np/MlGaM+SsPh2cXcafR3OZw==, tarball: pixi.js/download/pixi.js-6.2.2.tgz}
+    dependencies:
+      '@pixi/accessibility': 6.2.2_uwouqetoimyah3g5jii7ohzxpm
+      '@pixi/app': 6.2.2_gvze6i6g3adn3khmvypvs7hxgi
+      '@pixi/compressed-textures': 6.2.2_rm3npuesd75fkkrxcoy7k7up24
+      '@pixi/constants': 6.2.2
+      '@pixi/core': 6.2.2_tteuyu6kjrnfgi4g5jyt2yf4fi
+      '@pixi/display': 6.2.2_s4uauiowbx7ioianb42z5bfm6m
+      '@pixi/extract': 6.2.2_gomqhkt3vbstkckrqsh7gtl3cq
+      '@pixi/filter-alpha': 6.2.2_@pixi+core@6.2.2
+      '@pixi/filter-blur': 6.2.2_3wrizke7sln3pd7ztetqpkqava
+      '@pixi/filter-color-matrix': 6.2.2_@pixi+core@6.2.2
+      '@pixi/filter-displacement': 6.2.2_rwmfk47hc7dmhmrpkdbyckgssm
+      '@pixi/filter-fxaa': 6.2.2_@pixi+core@6.2.2
+      '@pixi/filter-noise': 6.2.2_@pixi+core@6.2.2
+      '@pixi/graphics': 6.2.2_3undmvip5kxrsqvzxwr2tcatda
+      '@pixi/interaction': 6.2.2_kezad3yfnfrh7767kjsum6jrni
+      '@pixi/loaders': 6.2.2_xvlzdpn2vvkcezl5lu3zbv6k54
+      '@pixi/math': 6.2.2
+      '@pixi/mesh': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/mesh-extras': 6.2.2_ckjmjh2ggrdjmirejyjazyhfgu
+      '@pixi/mixin-cache-as-bitmap': 6.2.2_2y5uxy773aeq2q5fcgpnedaoqq
+      '@pixi/mixin-get-child-by-name': 6.2.2_@pixi+display@6.2.2
+      '@pixi/mixin-get-global-position': 6.2.2_mkal36agyk7udrrcgp5vqaejuy
+      '@pixi/particle-container': 6.2.2_atnzpq4capzlzqxc5efdpwimqy
+      '@pixi/polyfill': 6.2.2
+      '@pixi/prepare': 6.2.2_6wcu4crpdq6pl6m4gsu7l42lfe
+      '@pixi/runner': 6.2.2
+      '@pixi/settings': 6.2.2
+      '@pixi/sprite': 6.2.2_dxilp4hi2f2r2ftwr5wa6wnwpq
+      '@pixi/sprite-animated': 6.2.2_3umokl7xltuc2bntoyrefufahq
+      '@pixi/sprite-tiling': 6.2.2_3undmvip5kxrsqvzxwr2tcatda
+      '@pixi/spritesheet': 6.2.2_2tf7bt5rmc3hso2f57txd7mluy
+      '@pixi/text': 6.2.2_cfppjymteppnizfw3uti5e7vua
+      '@pixi/text-bitmap': 6.2.2_dbinhgwas6epk5qtn7quekxmeu
+      '@pixi/ticker': 6.2.2_@pixi+settings@6.2.2
+      '@pixi/utils': 6.2.2_vuevw6xmjfu622ov5lys2euerm
+
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==, tarball: postcss-selector-parser/download/postcss-selector-parser-6.0.10.tgz}
     engines: {node: '>=4'}
@@ -2313,15 +2773,26 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
+  /promise-polyfill/8.2.3:
+    resolution: {integrity: sha512-Og0+jCRQetV84U8wVjMNccfGCnMQ9mGs9Hv78QFe+pSDD3gWTpz0y+1QCuxy5d/vBFuZ3iwP2eycAkvqIMPmWg==, tarball: promise-polyfill/download/promise-polyfill-8.2.3.tgz}
+
   /prr/1.0.1:
     resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=, tarball: prr/download/prr-1.0.1.tgz}
     dev: true
     optional: true
 
+  /punycode/1.3.2:
+    resolution: {integrity: sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=, tarball: punycode/download/punycode-1.3.2.tgz}
+
   /punycode/2.1.1:
     resolution: {integrity: sha1-tYsBCsQMIsVldhbI0sLALHv0eew=, tarball: punycode/download/punycode-2.1.1.tgz}
     engines: {node: '>=6'}
     dev: true
+
+  /querystring/0.2.0:
+    resolution: {integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=, tarball: querystring/download/querystring-0.2.0.tgz}
+    engines: {node: '>=0.4.x'}
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
 
   /queue-microtask/1.2.3:
     resolution: {integrity: sha1-SSkii7xyTfrEPg77BYyve2z7YkM=, tarball: queue-microtask/download/queue-microtask-1.2.3.tgz}
@@ -2692,6 +3163,12 @@ packages:
     dependencies:
       punycode: 2.1.1
     dev: true
+
+  /url/0.11.0:
+    resolution: {integrity: sha512-kbailJa29QrtXnxgq+DdCEGlbTeYM2eJUxsz6vjZavrCYPMIFHMKQmSKYAIuUK2i7hgPm28a8piX5NTUtM/LKQ==, tarball: url/download/url-0.11.0.tgz}
+    dependencies:
+      punycode: 1.3.2
+      querystring: 0.2.0
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: util-deprecate/download/util-deprecate-1.0.2.tgz}

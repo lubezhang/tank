@@ -1,5 +1,7 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+// import { createApp } from 'vue';
+import { createPixiApp } from './core';
+import App from './App';
+import { getRootContainer } from './game';
 import '@/assets/styles/main.less';
 
-createApp(App).mount('#app');
+createPixiApp(App).mount(getRootContainer());
