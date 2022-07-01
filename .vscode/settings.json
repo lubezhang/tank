@@ -1,0 +1,9 @@
+{
+    "path-autocomplete.pathMappings": {
+        "@": "${folder}/src", // alias for /test
+    },
+    "eslint.validate": [],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+}
