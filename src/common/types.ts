@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* 游戏元素类型 */
 export enum EnumGameElement {
     /** 炮弹 */
@@ -26,14 +27,19 @@ export enum EnumTankType {
     Enemy
 }
 
-interface TankPosition {
+/** 坦克位置 */
+export interface TankPosition {
     x: number,
     y: number
 }
 
 export interface BaseTank {
+    /** 坦克类型 */
     tankType: EnumTankType,
+    /** 坦克位置 */
     position: TankPosition,
+    /** 坦克移动方向 */
     direction: EnumGameTankCtrl,
+    /** 移动速度 */
     speed: number
 }

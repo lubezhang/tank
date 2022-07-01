@@ -12,6 +12,9 @@ const renderer = createRenderer({
             element = new Sprite();
             element.scale.x = 0.5;
             element.scale.y = 0.5;
+            element.anchor.x = 0.5;
+            element.anchor.y = 0.5;
+            element.rotation = 3.2;
             break;
         default:
             element = document.createElement('div');
