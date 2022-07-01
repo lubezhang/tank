@@ -51,9 +51,12 @@ const renderer = createRenderer({
             parent.addChild(el);
         }
     },
-    createComment () {},
-    parentNode () {},
-    nextSibling () {},
+    createComment (): any {},
+    parentNode (): any {},
+    nextSibling (node) {
+        return node;
+    },
+    setText () {},
     remove (el) {
         const parent = el.parent;
         if (parent) {

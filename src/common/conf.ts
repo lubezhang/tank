@@ -1,4 +1,4 @@
-import { EnumTankType, EnumGameTankCtrl } from '@/common/constants';
+import { EnumTankType, EnumGameTankCtrl } from '@/common/types';
 // import * as constants from './constants';
 
 export const gamer1 = {

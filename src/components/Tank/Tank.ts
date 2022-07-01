@@ -4,7 +4,7 @@ import { computeElementCoordinates } from '@/utils';
 import img1 from '@/assets/p1tankU.gif';
 
 export default defineComponent({
-    render (ctx) {
+    render () {
         return h(CONST_PIXI_ELEMENT_TYPE.CONTAINER, [
             h(CONST_PIXI_ELEMENT_TYPE.SPRITE, {
                 texture: img1,
