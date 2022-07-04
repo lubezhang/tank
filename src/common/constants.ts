@@ -1,4 +1,7 @@
-import { EnumGameTankCtrl } from './types';
+import { EnumGameTankCtrl, EnumTankType } from './types';
+import play1 from '@/assets/p1tankU.gif';
+import enemy1 from '@/assets/enemy1U.gif';
+
 /** 地图区域内的元素的基础尺寸 */
 export const CONST_MAP_BASE_SIZE = 15;
 export const CONST_MAP_BASE_ELEMENT_COUNT = 18;
@@ -23,12 +26,35 @@ export const CONST_PIXI_ELEMENT_TYPE = {
 
 /**
  * 键盘按键控制定义
- * w、a、s、d
+ * w:
+ * a:
+ * s:
+ * d:
+ * 空格:
  */
-export const CONST_GAME_KEY_MAP = {
-    65: EnumGameTankCtrl.Left, // 坦克向左移动
-    68: EnumGameTankCtrl.Right, // 坦克向右移动
-    87: EnumGameTankCtrl.Up, // 坦克向上移动
-    83: EnumGameTankCtrl.Down, // 坦克向下移动
-    75: EnumGameTankCtrl.Fire // 坦克开炮
+export const CONST_GAME_KEY_MAP = new Map<string, EnumGameTankCtrl>([
+    ['KeyA', EnumGameTankCtrl.Left],
+    ['KeyD', EnumGameTankCtrl.Right],
+    ['KeyW', EnumGameTankCtrl.Up],
+    ['KeyS', EnumGameTankCtrl.Down],
+    ['Space', EnumGameTankCtrl.Fire]
+]);
+
+export const CONST_GAME_IMG = {
+    /** 玩家1 */
+    TANK_PLAY1: play1,
+    /** 普通坦克 */
+    TANK_ENEMY1: enemy1
 };
+
+export const CONST_GAME_IMG_MAP = new Map<EnumTankType, string>([
+    [EnumTankType.Gamer1, play1],
+    [EnumTankType.Enemy1, enemy1]
+]);
+
+export const CONST_ELEMENT_ROTATION_MAP = new Map<number, number>([
+    [EnumGameTankCtrl.Up, 0],
+    [EnumGameTankCtrl.Right, 1.6],
+    [EnumGameTankCtrl.Down, 3.2],
+    [EnumGameTankCtrl.Left, 4.7]
+]);

@@ -10,11 +10,14 @@ const renderer = createRenderer({
             break;
         case 'Sprite':
             element = new Sprite();
+            // 缩放
             element.scale.x = 0.5;
             element.scale.y = 0.5;
+
+            // 设置锚点
             element.anchor.x = 0.5;
             element.anchor.y = 0.5;
-            element.rotation = 3.2;
+            // element.rotation = 0; // 旋转参数。90=>1.6; 180=>3.2
             break;
         default:
             element = document.createElement('div');

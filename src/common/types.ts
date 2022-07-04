@@ -23,12 +23,18 @@ export enum EnumTankType {
     Gamer1,
     /** 玩家2 */
     Gamer2,
-    /** 敌人 */
-    Enemy
+    /** 敌人 - 普通坦克 */
+    Enemy1
 }
 
-/** 坦克位置 */
+/** 坦克在画布上的逻辑位置 */
 export interface TankPosition {
+    x: number,
+    y: number
+}
+
+/** 坦克在画布上的物理坐标 */
+export interface Coordinates {
     x: number,
     y: number
 }
@@ -42,4 +48,13 @@ export interface BaseTank {
     direction: EnumGameTankCtrl,
     /** 移动速度 */
     speed: number
+}
+
+export interface InstanceTank extends BaseTank {
+    /** 旋转角度 */
+    rotation: number,
+    /** 坦克贴图 */
+    tankImg: string,
+    /** 坦克在画布上的物理坐标 */
+    coordinates: Coordinates
 }
